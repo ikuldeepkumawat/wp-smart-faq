@@ -1,0 +1,74 @@
+/* Smart FAQ Container */
+.smart-faq {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    font-family: Arial, sans-serif;
+}
+
+/* FAQ Heading */
+.smart-faq h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* FAQ List */
+.smart-faq ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* FAQ Item */
+.smart-faq li {
+    padding: 12px;
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+
+/* Hover effect */
+.smart-faq li:hover {
+    background: #f0f8ff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Question */
+.smart-faq li strong {
+    font-size: 16px;
+    color: #111;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Answer */
+.smart-faq li p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Toggle icon (arrow down by default) */
+/* Default Arrow (Down) */
+.smart-faq li strong::after {
+    content: '';
+    float: right;
+    width: 16px;
+    height: 16px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><path d="M64 88a3.988 3.988 0 0 1-2.828-1.172l-40-40c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0L64 78.344l37.172-37.172c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656l-40 40A3.988 3.988 0 0 1 64 88z" fill="%230073aa"/></svg>') no-repeat center center;
+    background-size: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Active (Rotate Up) */
+.smart-faq li.active strong::after {
+    transform: rotate(180deg);
+}
